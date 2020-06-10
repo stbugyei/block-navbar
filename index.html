@@ -6,106 +6,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>BLOCK NAVBAR</title>
+    <title>Block | Navbar</title>
 </head>
 
 <body>
-    <nav>
-        <div class="logo">Stbugyei<span class="smile">&#9787;</span>
+    <div class="head">
+
+        <div>
+
+            <nav>
+                <div class="logo">Stbugyei<span class="smile">&#9787;</span>
+                </div>
+              
+                <label for="check">
+                    <div class="checkbtn"><i class="fas fa-bars"></i></div>
+                </label>
+                <input type="checkbox" id="check">
+
+                <div class="sign-in">
+                    <a href="#"> <i class="far fa-user"></i></a>
+                </div>
+
+                <div class='search__container'>
+                    <form method="GET">
+                        <input class="input-field" type="text" name="keyword" placeholder="Enter keywords here"
+                            autocomplete="off">
+                        <a href='#'> <button type="submit" class='btn_search'><i class="fas fa-search"></i></button></a>
+                    </form>
+                </div>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+
+                    <li> <label for="check-3" class="mobile-view">Gener<i
+                                class="fas fa-chevron-down"></i></label>
+                        <a href="#">Gener<i class="fas fa-chevron-down"></i></a>
+                        <input type="checkbox" id="check-1">
+
+                        <ul class="sub-menu">
+                            <li> <a href="#">Action</a> </li>
+                            <li> <a href="#">Adventure</a> </li>
+                            <li> <a href="#">Animation</a> </li>
+                            <li> <a href="#">Biography</a> </li>
+                            <li> <a href="#">Costume</a> </li>
+                            <li> <a href="#">Comedy</a> </li>
+                            <li> <a href="#">Crime</a> </li>
+                            <li> <a href="#">Documentary</a> </li>
+                            <li> <a href="#">Drama</a> </li>
+                            <li> <a href="#">Family</a> </li>
+                            <li> <a href="#">Fantasy</a> </li>
+                            <li> <a href="#">History</a> </li>
+                            <li> <a href="#">Horror</a> </li>
+                            <li> <a href="#">Kungfu</a> </li>
+                            <li> <a href="#">Music</a> </li>
+                            <li> <a href="#">Mystery</a> </li>
+                            <li> <a href="#">Reality-TV</a> </li>
+                            <li> <a href="#">Romance</a> </li>
+                            <li> <a href="#">Sci-Fi</a> </li>
+                            <li> <a href="#">Sport</a> </li>
+                            <li> <a href="#">Thriller</a> </li>
+                            <li> <a Show href="#">TV Show</a> </li>
+                            <li> <a href="#">War</a> </li>
+                            <li> <a href="#">Western</a> </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <label for="check-1" class="mobile-view">Countries <i class="fas fa-chevron-down"></i></label>
+                        <a href="#">Countries <i class="fas fa-chevron-down"></i></a>
+                        <input type="checkbox" id="check-2">
+
+                        <ul class="sub-menu__country" style="width: 850px;">
+                            <li> <a href="#">United States</a> </li>
+                            <li> <a href="#">Ghana</a> </li>
+                            <li> <a href="#">United Kingdom</a> </li>
+                            <li> <a href="#">Canada</a> </li>
+                            <li> <a href="#">France</a> </li>
+                            <li> <a href="#">West Germany</a> </li>
+                            <li> <a href="#">Japan</a> </li>
+                            <li> <a href="#">Australia</a> </li>
+                            <li> <a href="#">Italy</a> </li>
+                            <li> <a href="#">International</a> </li>
+                            <li> <a href="#">Spain</a> </li>
+                            <li> <a href="#">Hong Kong</a> </li>
+                            <li> <a href="#">China</a> </li>
+                            <li> <a href="#">Ireland</a> </li>
+                            <li> <a href="#">Korea</a> </li>
+                            <li> <a href="#">India</a> </li>
+                            <li> <a href="#">Belgium</a> </li>
+                            <li> <a href="#">Denmark</a> </li>
+                            <li> <a href="#">Sweden</a> </li>
+                            <li> <a href="#">New Zealand</a> </li>
+                            <li> <a href="#">Netherlands</a> </li>
+                            <li> <a href="#">South Africa</a> </li>
+                            <li> <a href="#">Norway</a> </li>
+                            <li> <a href="#">Mexico</a> </li>
+                            <li> <a href="#">Switzerland</a> </li>
+                            <li> <a href="#">Austria</a> </li>
+                            <li> <a href="#">Czech Republic</a> </li>
+                            <li> <a href="#">Brazil</a> </li>
+                            <li> <a href="#">Russia</a> </li>
+                            <li> <a href="#">Argentina</a> </li>
+                            <li> <a href="#">Hungary</a> </li>
+                            <li> <a href="#">Poland</a> </li>
+                            <li> <a href="#">Finland</a> </li>
+                            <li> <a href="#">Israel</a> </li>
+                            <li> <a href="#">Romania</a> </li>
+                            <li> <a href="#">Luxembourg</a> </li>
+                            <li> <a href="#">Thailand</a> </li>
+                            <li> <a href="#">Taiwan</a> </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <label for="check-1" class="mobile-view">Year Released<i
+                                class="fas fa-chevron-down"></i></label>
+                        <a href="#">Year Released<i class="fas fa-chevron-down"></i></a>
+                        <input type="checkbox" id="check-3">
+
+                        <ul class="sub-menu" style="width: 500px;">
+                            <li> <a href="#">2020</a> </li>
+                            <li> <a href="#">2019</a> </li>
+                            <li> <a href="#">2018</a> </li>
+                            <li> <a href="#">2017</a> </li>
+                            <li> <a href="#">2016</a> </li>
+                            <li> <a href="#">2015</a> </li>
+                            <li> <a href="#">2014</a> </li>
+                            <li> <a href="#">2013</a> </li>
+                            <li> <a href="#">2012</a> </li>
+                            <li> <a href="#">2011</a> </li>
+                            <li> <a href="#">2010</a> </li>
+                            <li> <a href="#">2009</a> </li>
+                            <li> <a href="#">2008</a> </li>
+                            <li> <a href="#">2007</a> </li>
+                            <li> <a href="#">2006</a> </li>
+                            <li> <a href="#">2005</a> </li>
+                            <li> <a href="#">2004</a> </li>
+                            <li> <a href="#">2003</a> </li>
+                            <li> <a href="#">2002</a> </li>
+                            <li> <a href="#">2001</a> </li>
+                        </ul>
+                    </li> 
+
+                    <li><a href="#">Most Watched</a></li>
+
+                    <li><a href="#">Anime</a></li>
+
+                </ul>
+            </nav>
+            <div class="cover__page"></div>
         </div>
 
-        <label for="check">
-            <div class="checkbtn"><i class="fas fa-bars"></i></div>
-        </label>
-        <input type="checkbox" id="check">
-
-        <ul>
-            <li><a href="#">Home</a></li>
-
-            <li> <label for="check-3" class="mobile-view">Gener<i class="fas fa-chevron-down"></i></label>
-                <a href="#">Gener<i class="fas fa-chevron-down"></i></a>
-                <input type="checkbox" id="check-3">
-                <ul>
-                    <li> <a href="#">Action</a> </li>
-                    <li> <a href="#">Adventure</a> </li>
-                    <li> <a href="#">Animation</a> </li>
-                    <li> <a href="#">Biography</a> </li>
-                    <li> <a href="#">Costume</a> </li>
-                    <li> <a href="#">Comedy</a> </li>
-                    <li> <a href="#">Crime</a> </li>
-                    <li> <a href="#">Documentary</a> </li>
-                    <li> <a href="#">Drama</a> </li>
-                    <li> <a href="#">Family</a> </li>
-                    <li> <a href="#">Fantasy</a> </li>
-                    <li> <a href="#">Game-Show</a> </li>
-                    <li> <a href="#">History</a> </li>
-                    <li> <a href="#">Horror</a> </li>
-                    <li> <a href="#">Kungfu</a> </li>
-                    <li> <a href="#">Music</a> </li>
-                    <li> <a href="#">Mystery</a> </li>
-                    <li> <a href="#">Reality-TV</a> </li>
-                    <li> <a href="#">Romance</a> </li>
-                    <li> <a href="#">Sci-Fi</a> </li>
-                    <li> <a href="#">Sport</a> </li>
-                    <li> <a href="#">Thriller</a> </li>
-                    <li> <a Show href="#">TV Show</a> </li>
-                    <li> <a href="#">War</a> </li>
-                    <li> <a href="#">Western</a> </li>
-                </ul>
-            </li>
-
-            <li>
-                <label for="check-1" class="mobile-view">Countries <i class="fas fa-chevron-down"></i></label>
-                <a href="#">Countries <i class="fas fa-chevron-down"></i></a>
-                <input type="checkbox" id="check-1">
-
-                <ul>
-                    <li> <a href="#">United States</a> </li>
-                    <li> <a href="#">Ghana</a> </li>
-                    <li> <a href="#">United Kingdom</a> </li>
-                    <li> <a href="#">Canada</a> </li>
-                    <li> <a href="#">France</a> </li>
-                    <li> <a href="#">West Germany</a> </li>
-                    <li> <a href="#">Japan</a> </li>
-                    <li> <a href="#">Australia</a> </li>
-                    <li> <a href="#">Italy</a> </li>
-                    <li> <a href="#">International</a> </li>
-                    <li> <a href="#">Spain</a> </li>
-                    <li> <a href="#">Hong Kong</a> </li>
-                    <li> <a href="#">China</a> </li>
-                    <li> <a href="#">Ireland</a> </li>
-                    <li> <a href="#">Korea</a> </li>
-                    <li> <a href="#">India</a> </li>
-                    <li> <a href="#">Belgium</a> </li>
-                    <li> <a href="#">Denmark</a> </li>
-                    <li> <a href="#">Sweden</a> </li>
-                    <li> <a href="#">New Zealand</a> </li>
-                    <li> <a href="#">Netherlands</a> </li>
-                    <li> <a href="#">South Africa</a> </li>
-                    <li> <a href="#">Norway</a> </li>
-                    <li> <a href="#">Mexico</a> </li>
-                    <li> <a href="#">Switzerland</a> </li>
-                    <li> <a href="#">Austria</a> </li>
-                    <li> <a href="#">Czech Republic</a> </li>
-                    <li> <a href="#">Brazil</a> </li>
-                    <li> <a href="#">Russia</a> </li>
-                    <li> <a href="#">Argentina</a> </li>
-                    <li> <a href="#">Hungary</a> </li>
-                    <li> <a href="#">Poland</a> </li>
-                    <li> <a href="#">Finland</a> </li>
-                    <li> <a href="#">Israel</a> </li>
-                    <li> <a href="#">Romania</a> </li>
-                    <li> <a href="#">Luxembourg</a> </li>
-                    <li> <a href="#">Thailand</a> </li>
-                    <li> <a href="#">Taiwan</a> </li>
-                </ul>
-            </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Blog</a></li>
-        </ul>
-    </nav>
-
+    </div>
 </body>
 
 </html>
