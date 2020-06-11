@@ -112,14 +112,13 @@ nav ul li a{
     text-transform: capitalize;
     position: absolute; 
     opacity: 0;
-    visibility: hidden;   
+    visibility: hidden;    
     top: 90px;
     transition: .4s ease; 
     width: 700px;
     padding: 18px;
     background: rgb(255, 255, 255);
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
-
 }
 
 
@@ -179,14 +178,19 @@ nav ul li a{
 
 
  label .checkbtn i{
-  transform-origin: left bottom;
-  transition: transform 1s;
+  /* transform-origin: left bottom;
+  transition: transform 1s; */
+  opacity: 1;
+  color: #fff;
+  transition: 2s;
 }
 
 #check:checked ~label .checkbtn i{
-  transform: rotate(360deg);
-}   
+  /* transform: rotate(360deg); */
+  opacity: 1;
+  color: rgb(226, 109, 109);
 
+}   
 
 
 #check:checked ~label .checkbtn i:before{
@@ -275,6 +279,8 @@ form{
   } 
 
   .sub-menu, .sub-menu__country {
+    opacity: 1;
+    visibility: visible;    
     position: initial; 
     background:none; 
     box-shadow:none;
@@ -284,10 +290,12 @@ form{
   nav ul{
     width: 100%;
     right: -100%;
+    bottom: -100%;
     opacity: 0.5;
     position: absolute;
     top: 110px;
-    background: rgb(80, 62, 62);
+    /* background: rgb(80, 62, 62); */
+    background: #fff;
     transition: all 1s ease;
 
   }
@@ -298,8 +306,6 @@ form{
     opacity: 1;
     background: rgb(41, 40, 40);
   }  
-  
-  
   
   
   nav ul li, nav ul ul li {
@@ -387,37 +393,6 @@ visibility: hidden;
   padding-left: 26px;
 
 }  
-
-/* .sub-menu li a:hover, .sub-menu__country li a:hover{
-  color:none; 
-  background:none; 
-  padding-left: 10px;
-} 
-
-
-nav ul li:hover .sub-menu{
-  top: 0px;
-  opacity: 1;
-  visibility: visible;
-}  
-
-
-nav ul li:hover .sub-menu__country{
-top: 60px;
-opacity: 1;
-visibility: visible;
-}  */
-
-/* nav ul li:hover {
-  background: none;
-}   */
-
-
-/* nav ul li:hover a{
-  color:none;  
-  background: none; 
-}   */
-
 
 } 
 
