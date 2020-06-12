@@ -80,7 +80,7 @@ nav .logo{
 nav ul li{
      position: relative;
      display: inline-block; 
-     transition: 1s ease-out;
+     transition: 0.3s ease-out;
 }
 
 
@@ -92,18 +92,19 @@ nav ul li a{
     padding: 8px 15px;
     overflow: hidden;
     cursor: pointer; 
-    transition: 1s;
+    transition: 0.3s ease-out;
 }
 
   nav ul li:hover {
-    background: #fff;
+    background: #fff; 
+
 }   
 
 
- nav ul li:hover a{
+  nav ul li:hover a{
     color:#000;  
     background: #fff; 
-}   
+}      
 
 /* border-bottom: 2px solid #3A2558;  */
 /*sub menu*/
@@ -172,30 +173,239 @@ nav ul li a{
 }  
 
 
-.mobile-view, nav label .checkbtn, #check, #check-1, #check-2, #check-3{
-    display: none;
+.mobile-view, 
+ nav label .checkbtn, 
+ #check, 
+ #check-1,
+ #check-2, 
+ #check-3,
+ #signIn{
+  display: none; 
   }
 
+
+/*== Humburger transitions ==*/
 
  label .checkbtn i{
   /* transform-origin: left bottom;
   transition: transform 1s; */
+   font-size: 1em;
+  width: 1.6em;
+  text-align: center;
+  line-height: 1.6em;
+  border-radius: 0.8em;
+  box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23); 
   opacity: 1;
   color: #fff;
   transition: 2s;
+  outline: none; 
 }
 
 #check:checked ~label .checkbtn i{
   /* transform: rotate(360deg); */
+  font-size: 1em;
+  width: 1.6em;
+  text-align: center;
+  line-height: 1.6em;
+  border-radius: 0.8em;
+  background: #fff;
+  box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23); 
   opacity: 1;
-  color: rgb(226, 109, 109);
-
+  color: #000;
+  outline: none; 
 }   
-
 
 #check:checked ~label .checkbtn i:before{
   content: "\f00d";
+
 }
+
+/*== signIn form ==*/
+
+.sign-in__form{
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 12, 12, 0.8); 
+  display: none; 
+  position: absolute;
+  top: 0; 
+  z-index: 1;
+  transition: 1s;
+}
+
+
+
+.form-wrapper{
+  position: relative;
+  width: 450px;
+  margin: 50px auto;
+  margin-top: 15%;
+  padding: 5px;
+  border: 1px solid #424754;
+  border-radius: 5px; 
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+
+.form-title{
+  font-size: 1.5rem;
+  text-align: center;
+  color:#7a3cc7;
+  font-weight: 500;
+  margin: 50px;
+  text-transform: uppercase;
+}
+
+.input-container{
+  /* position: absolute; */
+  margin: 15px;
+  padding: 5px;
+  border-radius: 3px; 
+  background: #f6f6f6;
+ 
+}
+
+.form-field{
+  font-size: 1.1rem;
+  line-height: 3rem;
+  background: #f6f6f6;
+  padding: 0 10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none; 
+  resize: vertical;
+  outline: none;
+}
+
+.btn-icon{
+  font-size: 19.5px;
+  color: #7a3cc7;
+  padding-left: 10px;
+  cursor:pointer;
+  text-decoration:none;
+  outline: none;
+  border: none;
+}
+
+.forgot-password{
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login{
+  margin: 15px;
+}
+
+.btn-login{
+  font-size: 1.15rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 10px;
+  line-height: 2rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-image: linear-gradient(to right top, #8b49dc, #7a3cc7, #6a2fb3, #5a229f, #4a148c);
+  box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.btn-login:hover{
+background: #8b49dc;
+border-radius: 3px;
+}
+
+.social-media__content{
+  display: flex;
+  justify-content: center;
+}
+
+
+/*
+== Rounding contact media icons ==
+*/
+
+.facebook i {
+  font-size: 1.7em;
+  width: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 5em;
+  color: #fff;
+  background: #3b5998;
+  box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+  margin: 10px;
+  transition: 1s;
+} 
+
+.twitter i{
+  font-size: 1.7em;
+  width: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 5em;
+  color: #fff;
+  background:  #1da1f2;
+  box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+  margin: 10px;
+  transition: 1s;
+} 
+
+.instagram i {
+  font-size: 1.7em;
+  width: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 5em;
+  color: #fff;
+  background:  #c32aa3;
+  box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+  margin: 10px;
+  transition: 1s;
+} 
+
+.facebook i:hover, .twitter i:hover, .instagram i:hover{
+  transform: scale(1.1);
+}
+
+.create{
+  font-size: 0.99rem;
+  text-align: center;
+  color:#7a3cc7;
+  font-weight: 500;
+  margin: 15px;
+  text-transform: uppercase;
+}
+
+.links{
+  text-decoration: none;
+  color:#7a3cc7;
+}
+
+
+/* == make SignIn icon active when selected == */
+
+ #signIn:checked ~ label .sign-in i {
+  color:#7a3cc7;
+} 
+
+/* == Display SignIn form == */
+
+ [id^=signIn]:checked ~ label .sign-in__form {
+  display: block;
+}   
+
+
+
 
 /*== search ==*/
 
@@ -216,7 +426,7 @@ form{
 }
 
 .input-field{
-  width: 82%;
+  width: 82%; 
   padding: 0 10px;
   border-top: none;
   border-left: none;
@@ -273,10 +483,17 @@ form{
     position: absolute;
     top: 0;
     right: 20px;
-    line-height:3.5rem;
+    line-height:3.8rem;
     cursor: pointer;
     font-size: 25px;
+    outline: none;
   } 
+
+  .form-wrapper{
+    width: auto !important;
+    height: auto !important;
+    margin: 1px
+  }
 
   .sub-menu, .sub-menu__country {
     opacity: 1;
@@ -290,21 +507,22 @@ form{
   nav ul{
     width: 100%;
     right: -100%;
-    bottom: -100%;
-    opacity: 0.5;
+    visibility: hidden; 
+    opacity: 0.5; 
     position: absolute;
     top: 110px;
-    /* background: rgb(80, 62, 62); */
-    background: #fff;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #141313 0%, #434343 74%);
     transition: all 1s ease;
-
   }
 
   
   [id^=check]:checked ~ ul {
     right: 0;
-    opacity: 1;
-    background: rgb(41, 40, 40);
+    visibility: visible;
+    opacity: 1; 
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%); 
   }  
   
   
@@ -392,6 +610,21 @@ visibility: hidden;
   font-size: 20px;
   padding-left: 26px;
 
+}  
+
+nav ul li:hover {
+  background: #3b3b3b !important;
+} 
+
+nav ul li:hover a{
+  color:#fff;  
+  background: #3b3b3b !important;
+} 
+
+.sub-menu li a:hover, .sub-menu__country li a:hover{
+  color:#00acc1; 
+  background: #3b3b3b !important;
+  padding-left: 5px !important;
 }  
 
 } 
