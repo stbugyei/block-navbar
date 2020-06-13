@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
     user-select: none;
 }
   
@@ -179,8 +180,11 @@ nav ul li a{
  #check-1,
  #check-2, 
  #check-3,
- #signIn{
-  display: none; 
+ #signIn,
+ #toggle{
+  /* position: absolute;
+  left: -9999px; */
+  display: none;  
   }
 
 
@@ -222,20 +226,35 @@ nav ul li a{
 
 /*== signIn form ==*/
 
-.sign-in__form{
+  .sign-in__form{
   width: 100%;
   height: 100%;
-  background: rgba(12, 12, 12, 0.8); 
-  display: none; 
+  background: rgba(12, 12, 12, 0.8);   
+  display: none;   
   position: absolute;
-  top: 0; 
-  z-index: 1;
+  top: 0;    
+  z-index: 1; 
   transition: 1s;
+}  
+
+
+.navigation{
+  font-size: 1.5rem;
+  text-align: right;
+  color:#7a3cc7;
+  font-weight: 500;
+  margin: 15px; 
+  text-transform: uppercase;
 }
 
+ .navigation a{
+  text-decoration: none;
+  color:#7a3cc7;
+  padding: 10px;
+} 
 
 
-.form-wrapper{
+.form-wrapper__signin{
   position: relative;
   width: 450px;
   margin: 50px auto;
@@ -250,13 +269,36 @@ nav ul li a{
   box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
 }
 
+.form-wrapper__signup{
+  position: relative;
+  width: 450px;
+  margin: 50px auto;
+  margin-top: -778px; 
+  padding: 5px;
+  border: 1px solid #424754;
+  border-radius: 5px; 
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+  z-index: 9;
+}
+
+/* == Toggle SignUp and SignIn pages == */
+
+#toggle:checked ~ label .sign-in__form form.form-wrapper__signup{
+  z-index: -9;
+ } 
+ 
+
 
 .form-title{
   font-size: 1.5rem;
   text-align: center;
   color:#7a3cc7;
   font-weight: 500;
-  margin: 50px;
+  margin-bottom: 40px;
   text-transform: uppercase;
 }
 
@@ -267,6 +309,13 @@ nav ul li a{
   border-radius: 3px; 
   background: #f6f6f6;
  
+}
+
+
+.forgot-password{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
 }
 
 .form-field{
@@ -292,10 +341,8 @@ nav ul li a{
   border: none;
 }
 
-.forgot-password{
-  margin: 15px;
-  display: flex;
-  justify-content: space-between;
+.signin-login{
+  margin: 20px 15px 15px 15px;
 }
 
 .login{
@@ -384,6 +431,7 @@ border-radius: 3px;
   font-weight: 500;
   margin: 15px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .links{
@@ -400,11 +448,9 @@ border-radius: 3px;
 
 /* == Display SignIn form == */
 
- [id^=signIn]:checked ~ label .sign-in__form {
-  display: block;
-}   
-
-
+ #signIn:checked ~ label .sign-in__form {
+  display: block; 
+} 
 
 
 /*== search ==*/
@@ -489,11 +535,15 @@ form{
     outline: none;
   } 
 
-  .form-wrapper{
+   .form-wrapper__signup{
+   
+  margin-top: -781px;
+  } 
+
+  .form-wrapper__signin, .form-wrapper__signup {
     width: auto !important;
     height: auto !important;
-    margin: 1px
-  }
+}
 
   .sub-menu, .sub-menu__country {
     opacity: 1;
