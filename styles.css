@@ -107,7 +107,7 @@ nav ul li a{
     background: #fff; 
 }      
 
-/* border-bottom: 2px solid #3A2558;  */
+
 /*sub menu*/
 
 .sub-menu, .sub-menu__country{
@@ -181,18 +181,21 @@ nav ul li a{
  #check-2, 
  #check-3,
  #signIn,
- #toggle{
+ #toggle,
+ #form{
   /* position: absolute;
   left: -9999px; */
-  display: none;  
+  cursor: pointer;
+  display: none; 
   }
+  
 
 
 /*== Humburger transitions ==*/
 
  label .checkbtn i{
   /* transform-origin: left bottom;
-  transition: transform 1s; */
+  transition: transform 1s;  */
    font-size: 1em;
   width: 1.6em;
   text-align: center;
@@ -201,7 +204,7 @@ nav ul li a{
   box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23); 
   opacity: 1;
   color: #fff;
-  transition: 2s;
+  transition: 2s; 
   outline: none; 
 }
 
@@ -230,12 +233,27 @@ nav ul li a{
   width: 100%;
   height: 100%;
   background: rgba(12, 12, 12, 0.8);   
-  display: none;   
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   top: 0;    
   z-index: 1; 
-  transition: 1s;
+  transition: 1s; 
 }  
+
+/* == make SignIn icon active when selected == */
+
+#signIn:checked + label .sign-in i {
+  color:#8e95a5;
+} 
+
+/* == Display SignIn form == */
+
+ #signIn:checked ~ label .sign-in__form{
+  visibility: visible; 
+  opacity: 1;
+} 
+
 
 
 .navigation{
@@ -253,13 +271,13 @@ nav ul li a{
   padding: 10px;
 } 
 
-
-.form-wrapper__signin{
-  position: relative;
-  width: 450px;
+.form-wrapper__signin, .form-wrapper__signup{
+  /* margin-top: 5%; */
+  position: relative; 
+  padding: 20px;
+  width: 450px; 
+  height: 670px; 
   margin: 50px auto;
-  margin-top: 15%;
-  padding: 5px;
   border: 1px solid #424754;
   border-radius: 5px; 
   background: #ffffff;
@@ -268,29 +286,22 @@ nav ul li a{
   justify-content: space-between;
   box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
 }
+
 
 .form-wrapper__signup{
-  position: relative;
-  width: 450px;
-  margin: 50px auto;
-  margin-top: -778px; 
-  padding: 5px;
-  border: 1px solid #424754;
-  border-radius: 5px; 
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
-  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.7s ease;
 }
+
 
 /* == Toggle SignUp and SignIn pages == */
 
 #toggle:checked ~ label .sign-in__form form.form-wrapper__signup{
-  z-index: -9;
+  visibility: visible;
+  opacity: 1;
+  margin-top: -720px; 
  } 
- 
 
 
 .form-title{
@@ -298,19 +309,51 @@ nav ul li a{
   text-align: center;
   color:#7a3cc7;
   font-weight: 500;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
 .input-container{
-  /* position: absolute; */
-  margin: 15px;
-  padding: 5px;
-  border-radius: 3px; 
-  background: #f6f6f6;
- 
+  margin: 10px;
+  border-radius: 1px; 
+  /* background: #f6f6f6;   */ 
 }
 
+.input-container__content{
+  position: relative;
+  width: 100%;
+  display: table;
+}
+
+.user-icon {
+  position: absolute;
+  font-size: 1.3rem;
+  color: #7a3cc7;
+  text-rendering: auto; 
+  top: 12px;
+  left: 15px;
+  display: inline;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.form-field{
+  width: 100%;
+  padding-left: 60px;
+  font-size: 1.0rem;
+  line-height: 3.5rem;
+  background: #f6f6f6;
+  border: none;
+  resize: vertical;
+  outline: none; 
+  transition: 1s;
+}
+ 
+ .form-field:focus, select:focus{
+  border-color:#7a3cc7;
+  box-shadow:0 0 3px #7a3cc7;
+} 
 
 .forgot-password{
   display: flex;
@@ -318,28 +361,6 @@ nav ul li a{
   margin: 15px;
 }
 
-.form-field{
-  font-size: 1.1rem;
-  line-height: 3rem;
-  background: #f6f6f6;
-  padding: 0 10px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: none; 
-  resize: vertical;
-  outline: none;
-}
-
-.btn-icon{
-  font-size: 19.5px;
-  color: #7a3cc7;
-  padding-left: 10px;
-  cursor:pointer;
-  text-decoration:none;
-  outline: none;
-  border: none;
-}
 
 .signin-login{
   margin: 20px 15px 15px 15px;
@@ -379,7 +400,7 @@ border-radius: 3px;
 */
 
 .facebook i {
-  font-size: 1.7em;
+  font-size: 1.3em;
   width: 2em;
   text-align: center;
   line-height: 2em;
@@ -393,7 +414,7 @@ border-radius: 3px;
 } 
 
 .twitter i{
-  font-size: 1.7em;
+  font-size: 1.3em;
   width: 2em;
   text-align: center;
   line-height: 2em;
@@ -407,7 +428,7 @@ border-radius: 3px;
 } 
 
 .instagram i {
-  font-size: 1.7em;
+  font-size: 1.3em;
   width: 2em;
   text-align: center;
   line-height: 2em;
@@ -434,71 +455,73 @@ border-radius: 3px;
   cursor: pointer;
 }
 
+.create1{
+  font-size: 0.99rem;
+  text-align: center;
+  color:#7a3cc7;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 5px 0px 15px 0px;
+}
+
+
 .links{
   text-decoration: none;
   color:#7a3cc7;
 }
 
 
-/* == make SignIn icon active when selected == */
-
- #signIn:checked ~ label .sign-in i {
-  color:#7a3cc7;
-} 
-
-/* == Display SignIn form == */
-
- #signIn:checked ~ label .sign-in__form {
-  display: block; 
-} 
-
-
 /*== search ==*/
 
 .search__container{
   position: relative;
-  width: 17%;
   float: right;
+  width: 17%;
   margin: 15px;
-  padding: 5px;
-  border: 1px solid #424754;
-  border-radius: 3px; 
-  background: #fff;
-  transition: all 0.5s; 
-}
-
-form{
-  position: relative;
+  border-radius: 3px;  
+  /* display: inline-block; */
 }
 
 .input-field{
-  width: 82%; 
-  padding: 0 10px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: none; 
-  resize: vertical;
-  outline: none;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 50px;
+  font-size: 0.8rem;
+  line-height: 2rem;
   background: #fff;
-  transition: all 0.5s; 
-} 
-
-.btn_search{
-  width: 15%;
-  display:inline-block;
-  cursor:pointer;
-  text-decoration:none;
-  outline: none;
   border: none;
-  border-left: 1px solid;
-  background: rgb(255, 254, 254);
+  resize: vertical;
+  outline: none; 
+  border-radius: 2px; 
+  transition: 1s;
 } 
 
-/* .input-field:focus,
-  select:focus:before{
-    display: inline-block;
-  }  */
+.input-field:focus,select:focus{
+  color: #fff;
+  border:1px solid #8e95a5;
+  background:#000; 
+  box-shadow:0 0 10px #8e95a5;
+} 
+
+.btn-search{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  display: block;
+  height: 32px;
+  background: none;
+  color: #8e95a5;
+  font-size: 1.2rem;
+} 
+
+ 
+.btn-search i{
+ color:#8e95a5;
+  padding: 0px 15px 0px 15px;
+  font-size: 0.8rem;  
+}  
 
 /*
 === sign-in ===
@@ -510,12 +533,18 @@ form{
     margin: 15px 40px 0px 15px;
     padding: 3px;
     border-radius: 3px; 
+    cursor: pointer;
   }
 
   .sign-in i{
   color: #f4f6fb;
   font-size: 28px;
 
+  }
+
+  .signup-text{
+    text-align: center;
+    margin: 15px 0px 5px 0px;
   }
 /*
 === media querry ===
@@ -535,14 +564,20 @@ form{
     outline: none;
   } 
 
-   .form-wrapper__signup{
-   
-  margin-top: -781px;
-  } 
+
+  #toggle:checked ~ label .sign-in__form form.form-wrapper__signup{
+     margin-top: -679px;  
+   } 
+  
 
   .form-wrapper__signin, .form-wrapper__signup {
     width: auto !important;
-    height: auto !important;
+    margin: 10px;
+}
+
+.signup-text{
+  text-align: center;
+  margin: 0px;
 }
 
   .sub-menu, .sub-menu__country {
@@ -560,7 +595,7 @@ form{
     visibility: hidden; 
     opacity: 0.5; 
     position: absolute;
-    top: 110px;
+    top: 91px;
     background-color: #000000;
     background-image: linear-gradient(147deg, #141313 0%, #434343 74%);
     transition: all 1s ease;
@@ -648,12 +683,13 @@ visibility: hidden;
 
 .search__container{
   width: 100%;
-  top: 0px;
-  left: 0px;
-  padding: 12px;
-  border-radius: 0;
   margin: 0;
 }
+
+.input-field{
+  line-height: 2rem;
+  border-radius: 0px; 
+} 
 
 
 .btn_search i{

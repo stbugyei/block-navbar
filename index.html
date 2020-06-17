@@ -14,7 +14,6 @@
     <div class="head">
 
         <div>
-
             <nav>
                 <div class="logo">Stbugyei<span class="smile">&#9787;</span>
                 </div>
@@ -26,14 +25,15 @@
 
                 <input type="checkbox" id="signIn">
 
+                <label for="signIn">
+                    <div class="sign-in"><i class="far fa-user"></i></div>
+                </label>
+
                 <input type="checkbox" id="toggle">
 
-                <label for="signIn">
+                <input type="checkbox" id="form">
 
-                    <label for="signIn">
-                        <div class="sign-in"><i class="far fa-user"></i></div>
-                    </label>
-
+                <label for="form">
                     <div class="sign-in__form">
 
                         <form class="form-wrapper__signin">
@@ -47,22 +47,33 @@
                             </div>
 
                             <div class="input-container">
-                                <p><label for="name"></label><span class="btn-icon"><i
-                                            class="far fa-user"></i></span><input class=" form-field" id="name"
-                                        type="text" placeholder="Type your name" autocomplete="off"></p>
+
+                                <div class="input-container__content">
+                                    <label for="name"></label>
+                                    <span class="user-icon"><i class="far fa-user"></i></span>
+                                    <input class="form-field" id="name" type="text" placeholder="Type your name"
+                                        autocomplete="off">
+                                </div>
+
                             </div>
 
                             <div class="input-container">
-                                <p><label for="email"></label><span class="btn-icon"><i
-                                            class="fas fa-envelope"></i></i></span><input class=" form-field" id="email"
-                                        type="text" placeholder="Email" autocomplete="off"></p>
+                                <div class="input-container__content">
+                                    <label for="email"></label>
+                                    <span class="user-icon"><i class="fas fa-envelope"></i></span>
+                                    <input class="form-field" id="email" type="text" placeholder="Email"
+                                        autocomplete="off">
+                                </div>
                             </div>
 
                             <div class="input-container">
-                                <p><label for="password"></label><span class="btn-icon"><i
-                                            class="fas fa-unlock-alt"></i></span><input class=" form-field"
-                                        id="password" type="password" placeholder="Enter password" autocomplete="off">
-                                </p>
+                                <div class="input-container__content">
+                                    <label for="password"></label>
+                                    <span class="user-icon"><i
+                                        class="fas fa-unlock-alt"></i></span>
+                                    <input class="form-field" id="password" type="text" placeholder="Enter password"
+                                        autocomplete="off">
+                                </div>
                             </div>
 
                             <div class="forgot-password">
@@ -75,7 +86,7 @@
 
                             <div class="signin-login"><button class="btn-login">LOGIN</button></div>
 
-                            <P style="text-align: center;margin: 15px 0px 5px 0px;"> Sign Up with </P>
+                            <P class="signup-text" > Sign Up with </P>
 
                             <div class="social-media__content">
 
@@ -91,7 +102,7 @@
                             </div>
 
                             <label for="toggle">
-                                <div class="create">
+                                <div class="create1">
                                     <p>Don't have account? Register!</p>
                                 </div>
                             </label>
@@ -107,36 +118,55 @@
                             <div class="form-title">
                                 <p>CREATE YOUR ACCOUNT</p>
                             </div>
-
+                            
                             <div class="input-container">
-                                <p><label for="info"></label><span class="btn-icon"><i
-                                            class="fas fa-info"></i></span><input class=" form-field" id="info"
-                                        type="text" placeholder="Display name" autocomplete="off"></p>
+                                <div class="input-container__content">
+                                    <label for="info"></label>
+                                    <span class="user-icon"><i
+                                        class="fas fa-info"></i></span>
+                                    <input class="form-field" id="info" type="text" placeholder="Display name"
+                                        autocomplete="off">
+                                </div>
                             </div>
 
                             <div class="input-container">
-                                <p><label for="user"></label><span class="btn-icon"><i
-                                            class="far fa-user"></i></span><input class=" form-field" id="user"
-                                        type="text" placeholder="Username" autocomplete="off"></p>
+                                <div class="input-container__content">
+                                    <label for="user"></label>
+                                    <span class="user-icon"><i
+                                        class="far fa-user"></i></span>
+                                    <input class="form-field" id="user" type="text" placeholder="Username"
+                                        autocomplete="off">
+                                </div>
                             </div>
 
                             <div class="input-container">
-                                <p><label for="email"></label><span class="btn-icon"><i
-                                            class="fas fa-envelope"></i></i></span><input class=" form-field" id="email"
-                                        type="text" placeholder="Email" autocomplete="off"></p>
+                                <div class="input-container__content">
+                                    <label for="email"></label>
+                                    <span class="user-icon"><i
+                                        class="fas fa-envelope"></i></span>
+                                    <input class="form-field" id="email" type="text" placeholder="Email"
+                                        autocomplete="off">
+                                </div>
                             </div>
 
                             <div class="input-container">
-                                <p><label for="password"></label><span class="btn-icon"><i
-                                            class="fas fa-lock"></i></i></span><input class=" form-field" id="password"
-                                        type="text" placeholder="Password" autocomplete="off"></p>
+                                <div class="input-container__content">
+                                    <label for="password"></label>
+                                    <span class="user-icon"><i
+                                        class="fas fa-lock"></i></span>
+                                    <input class="form-field" id="password" type="text" placeholder="Password"
+                                        autocomplete="off">
+                                </div>
                             </div>
 
                             <div class="input-container">
-                                <p><label for="password"></label><span class="btn-icon"><i
-                                            class="fas fa-lock"></i></i></span><input class=" form-field" id="password"
-                                        type="text" placeholder="Confirm Password" autocomplete="off">
-                                </p>
+                                <div class="input-container__content">
+                                    <label for="password"></label>
+                                    <span class="user-icon"><i
+                                        class="fas fa-lock"></i></span>
+                                    <input class="form-field" id="password" type="text" placeholder="Confirm password"
+                                        autocomplete="off">
+                                </div>
                             </div>
 
                             <div class="login"><button class="btn-login">REGISTER</button></div>
@@ -146,17 +176,17 @@
                                     <p>Sign in!</p>
                                 </div>
                             </label>
-                        </form>
+                        </form> 
                     </div>
                 </label>
 
                 <div class='search__container'>
-                    <form method="GET">
+                    <form  method="GET">
                         <input class="input-field" type="search" name="keyword" placeholder="Enter keywords here"
                             autocomplete="off">
-                        <a href='#'> <button type="submit" class='btn_search'><i class="fas fa-search"></i></button></a>
+                       <button class="btn-search" type="submit"><i class="fa fa-search"></i></button> 
                     </form>
-                </div>
+                </div> 
 
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -282,3 +312,5 @@
 </body>
 
 </html>
+
+ <!-- <div class="input-container">
