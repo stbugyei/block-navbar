@@ -37,7 +37,8 @@
 
 nav{
     height: 60px;
-    background:rgb(12, 10, 10);
+    /* background:rgb(12, 10, 10); */
+    background-image: linear-gradient(to right top, #2f272d, #2d262e, #2a252f, #27242f, #232430);
     text-transform: capitalize;
 }
 
@@ -74,14 +75,14 @@ nav .logo{
 
  nav ul{
   list-style: none;
-  transition: all 0.5s; 
+  transition: all 0.2s; 
 }
 
 
 nav ul li{
      position: relative;
      display: inline-block; 
-     transition: 0.3s ease-out;
+     transition: 0.2s;
 }
 
 
@@ -90,19 +91,19 @@ nav ul li a{
     color: #fff; 
     line-height: 60px;
     font-size: 16px;
-    padding: 8px 15px;
+    padding: 20px 15px;
     overflow: hidden;
     cursor: pointer; 
-    transition: 0.3s ease-out;
+    transition: 0.2s;
 }
 
-  nav ul li:hover {
+  /* nav ul li:hover {
     background: #fff; 
 
-}   
+}    */
 
 
-  nav ul li:hover a{
+  nav ul li a:hover{
     color:#000;  
     background: #fff; 
 }      
@@ -116,11 +117,11 @@ nav ul li a{
     opacity: 0;
     visibility: hidden;    
     top: 90px;
-    transition: .4s ease; 
+    transition: .2s; 
     width: 700px;
     padding: 18px;
     background: rgb(255, 255, 255);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23); */
 }
 
 
@@ -153,9 +154,10 @@ nav ul li a{
 }
 
 
-.sub-menu li a:hover, .sub-menu__country li a:hover{
+.sub-menu li a:hover,
+.sub-menu__country li a:hover{
     color:rgb(17, 85, 204); 
-    background: #f4f6fb; 
+    background: #f4f6fb;   
     padding-left: 10px;
 }  
 
@@ -166,12 +168,12 @@ nav ul li a{
     visibility: visible;
 }   
 
-
+/* 
  nav ul li:hover .sub-menu__country{
   top: 60px;
   opacity: 1;
   visibility: visible;
-}  
+}   */
 
 
 .mobile-view, 
@@ -291,7 +293,7 @@ nav ul li a{
 .form-wrapper__signup{
   visibility: hidden;
   opacity: 0;
-  transition: 0.7s ease;
+  transition: 0.3s ease;
 }
 
 
@@ -347,7 +349,7 @@ nav ul li a{
   border: none;
   resize: vertical;
   outline: none; 
-  transition: 1s;
+  transition: .5s;
 }
  
  .form-field:focus, select:focus{
@@ -494,7 +496,7 @@ border-radius: 3px;
   resize: vertical;
   outline: none; 
   border-radius: 2px; 
-  transition: 1s;
+  transition: 0.5s;
 } 
 
 .input-field:focus,select:focus{
@@ -596,9 +598,8 @@ border-radius: 3px;
     opacity: 0.5; 
     position: absolute;
     top: 91px;
-    background-color: #000000;
-    background-image: linear-gradient(147deg, #141313 0%, #434343 74%);
-    transition: all 1s ease;
+    background-image: linear-gradient(to right top, #2f272d, #2d262e, #2a252f, #27242f, #232430);
+    transition: all 0.5s ease;
   }
 
   
@@ -606,8 +607,6 @@ border-radius: 3px;
     right: 0;
     visibility: visible;
     opacity: 1; 
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #414141 74%); 
   }  
   
   
@@ -698,20 +697,21 @@ visibility: hidden;
 
 }  
 
-nav ul li:hover {
-  background: #3b3b3b !important;
+nav ul li a:hover {
+  color: #ffffff;
+  background: initial !important;
 } 
 
-nav ul li:hover a{
+/* nav ul li:hover a{
   color:#fff;  
   background: #3b3b3b !important;
-} 
+}  */
 
 .sub-menu li a:hover, .sub-menu__country li a:hover{
   color:#00acc1; 
-  background: #3b3b3b !important;
+  background: initial !important;
   padding-left: 5px !important;
-}  
+}   
 
 } 
 
